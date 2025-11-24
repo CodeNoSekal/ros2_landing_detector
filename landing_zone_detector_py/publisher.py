@@ -46,7 +46,7 @@ class NpyPublisher(Node):
     def timer_callback(self):
         self.msg.header.stamp = self.get_clock().now().to_msg()
         self.publisher_.publish(self.msg)
-        self.get_logger().info(f"📡 Отправлено облако из {self.msg.width} точек (XYZ)")
+        self.get_logger().info(f"Отправлено облако из {self.msg.width} точек (XYZ)")
 
 def main(args=None):
     rclpy.init(args=args)
