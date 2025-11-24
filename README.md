@@ -64,5 +64,5 @@ ros2 run landing_zone_detector subscriber
 Сжатые облака точек доступны по этой ссылке
 https://cloud.mirea.ru/index.php/s/9rgGJYma4cFwXpP
 
-Архив с полными и с жатыми облаками точек доступен по этой ссылке
+Архив с полными и с сжатыми облаками точек доступен по этой ссылке
 https://cloud.mirea.ru/index.php/s/4rnRYznr9iNgA7j
