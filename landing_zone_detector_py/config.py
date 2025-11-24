@@ -1,6 +1,5 @@
 # Пути к папкам с патчами
-LIGHT_PATCH_FOLDER = r"/mnt/d/Documents/npy_prepared"
-COLOR_PATCH_FOLDER = r"/mnt/d/Documents/npy"
+PATCH_FOLDER = r"/mnt/d/Documents/npy_prepared"
 
 # Текущий патч (номер)
 CURRENT_PATCH = 6
