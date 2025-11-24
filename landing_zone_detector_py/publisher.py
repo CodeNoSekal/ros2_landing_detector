@@ -34,7 +34,7 @@ class NpyPublisher(Node):
         super().__init__('npy_publisher')
         self.publisher_ = self.create_publisher(PointCloud2, 'lidar_points', 10)
 
-        patch_path = f"{config.LIGHT_PATCH_FOLDER}/patch_{config.CURRENT_PATCH}.npy"
+        patch_path = f"{config.PATCH_FOLDER}/patch_{config.CURRENT_PATCH}.npy"
 
         self.get_logger().info(f"Загрузка облака точек из {patch_path}")
         points = np.load(patch_path)
