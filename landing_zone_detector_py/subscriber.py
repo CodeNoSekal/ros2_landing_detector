@@ -98,18 +98,20 @@ class LandingZoneSubscriber(Node):
     def __init__(self):
         super().__init__('landing_zone_subscriber')
         self.subscription = self.create_subscription(PointCloud2, 'lidar_points', self.listener_callback, 10)
-        self.subscription  # предотвращает сборку мусора
+        self.subscription
 
     def listener_callback(self, msg):
         t0 = time.time()
         pts = pointcloud2_to_xyz_array(msg)
         result = find_safe_landing_point(pts)
         if result is None:
-            self.get_logger().warn("⚠️ Безопасная зона не найдена")
+            self.get_logger().warn("Безопасная зона не найдена")
         else:
             center, tilt, std = result
+            self.get_logger().info("###########################################################")
             self.get_logger().info(f"Центр безопасной зоны: {center.round(3)}")
-            self.get_logger().info(f"Угол наклона: {tilt:.2f}° | ↕ std: {std:.3f} м | ⏱ {(time.time()-t0):.3f} с")
+            self.get_logger().info("###########################################################")
+            self.get_logger().info(f"Угол наклона: {tilt:.2f}° | std: {std:.3f} м | {(time.time()-t0):.3f} с")
 
 def main(args=None):
     rclpy.init(args=args)
