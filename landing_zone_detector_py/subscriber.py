@@ -108,9 +108,7 @@ class LandingZoneSubscriber(Node):
             self.get_logger().warn("Безопасная зона не найдена")
         else:
             center, tilt, std = result
-            self.get_logger().info("###########################################################")
             self.get_logger().info(f"Центр безопасной зоны: {center.round(3)}")
-            self.get_logger().info("###########################################################")
             self.get_logger().info(f"Угол наклона: {tilt:.2f}° | std: {std:.3f} м | {(time.time()-t0):.3f} с")
 
 def main(args=None):
