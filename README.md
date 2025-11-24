@@ -46,6 +46,7 @@ source install/setup.bash
 ```
 
 ## Запуск
+Также необходимо в файле config.py указать путь к папке с облаками точек.
 ```bash
 #В одной консоли
 source ~/ros2_landing_ws/install/setup.bash
