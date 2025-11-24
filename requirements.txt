@@ -1,0 +1,10 @@
+# ROS2 Python client library
+rclpy
+
+# Работа с массивами и линейной алгеброй
+numpy<2
+scipy<2
+scikit-learn
+
+# Для удобной работы с пакетами Python
+setuptools
